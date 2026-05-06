@@ -1,0 +1,5 @@
+{"type":"session_meta","timestamp":"2026-04-09T10:00:00Z","payload":{"cwd":"/workspace/sample-workflow-demo"}}
+{"type":"response_item","timestamp":"2026-04-09T10:05:00Z","payload":{"role":"user","content":[{"type":"input_text","text":"Create a weekly Markdown report with overview, project stats, messages, and keywords."}]}}
+{"type":"user_message","timestamp":"2026-04-10T11:25:00Z","payload":{"message":"Add a privacy boundary document that explains local-first processing and sample-only public data.","cwd":"/workspace/sample-workflow-demo"}}
+{"type":"response_item","timestamp":"2026-04-11T09:40:00Z","payload":{"role":"user","content":[{"type":"input_text","text":"Add a unit test that confirms generated reports contain a weekly title and project statistics."}]}}
+

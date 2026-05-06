@@ -1,0 +1,6 @@
+{"type":"user","timestamp":"2026-04-06T09:12:00Z","cwd":"/workspace/sample-web-app","message":{"role":"user","content":"Create a compact dashboard view for weekly agent activity. Keep the layout focused on project stats and recent user requests."}}
+{"type":"assistant","timestamp":"2026-04-06T09:13:00Z","cwd":"/workspace/sample-web-app","message":{"role":"assistant","content":"I will inspect the existing layout and add the dashboard view."}}
+{"type":"user","timestamp":"2026-04-07T14:30:00Z","cwd":"/workspace/sample-web-app","message":{"role":"user","content":[{"type":"text","text":"Add filters for week and project. The empty state should explain that sample data is required."}]}}
+{"type":"user","timestamp":"2026-04-08T11:05:00Z","cwd":"/workspace/sample-agent-tool","message":{"role":"user","content":"Refactor the parser so system messages are skipped before keyword extraction."}}
+{"type":"user","timestamp":"2026-04-08T11:06:00Z","cwd":"/workspace/sample-agent-tool","message":{"role":"user","content":"<local-command-output>internal command output</local-command-output>"}}
+

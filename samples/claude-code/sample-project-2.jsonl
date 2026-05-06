@@ -1,0 +1,4 @@
+{"type":"user","timestamp":"2026-04-09T16:20:00Z","cwd":"/workspace/sample-workflow-demo","message":{"role":"user","content":"Generate a Markdown report that groups messages by date, project, and device."}}
+{"type":"user","timestamp":"2026-04-10T10:10:00Z","cwd":"/workspace/sample-agent-tool","message":{"role":"user","content":"Add tests that run against temporary output directories and do not read personal machine paths."}}
+{"type":"user","timestamp":"2026-04-11T15:42:00Z","cwd":"/workspace/sample-workflow-demo","message":{"role":"user","content":"Summarize top keywords so the weekly review highlights parser, report, workflow, and project themes."}}
+
