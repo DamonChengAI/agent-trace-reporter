@@ -42,6 +42,10 @@ python -m unittest discover -s tests
 - [Claude Code sample report](sample-reports/2026-W15/cc-sample.md)
 - [Codex sample report](sample-reports/2026-W15/cd-sample.md)
 
+![Agent Trace Reporter 周报预览](docs/assets/readme/agent-trace-sample-report.png)
+
+_由虚构 Claude Code / Codex sample logs 生成的周报预览，包含项目统计、高频关键词和按日期聚合的用户请求。_
+
 ## 这个项目展示什么
 
 这个仓库用于展示：

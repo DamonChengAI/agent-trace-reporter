@@ -42,6 +42,10 @@ python -m unittest discover -s tests
 - [Claude Code sample report](sample-reports/2026-W15/cc-sample.md)
 - [Codex sample report](sample-reports/2026-W15/cd-sample.md)
 
+![Agent Trace Reporter sample weekly report](docs/assets/readme/agent-trace-sample-report.png)
+
+_Sample weekly report generated from fictional Claude Code / Codex logs, including project stats, frequent keywords, and user requests grouped by date._
+
 ## What This Demonstrates
 
 This repository demonstrates:
