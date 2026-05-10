@@ -1,35 +1,37 @@
 # Agent Trace Reporter
 
-`Agent Trace Reporter` is a local-first CLI tool that converts AI coding session logs into weekly Markdown reports.
+> English version: [README.en.md](README.en.md)
 
-## Why This Exists
+`Agent Trace Reporter` 是一个 local-first CLI 工具，用于把 AI Coding session logs 转换成按周聚合的 Markdown 复盘报告。
 
-AI coding work often lives in local session traces, not only in final commits. Prompts contain task context, execution boundaries, debugging paths, failed attempts, constraint changes, and final decisions.
+## 为什么做这个项目
 
-Agent Trace Reporter turns those local traces into weekly Markdown reports grouped by week, project, and device. The goal is to make AI coding work searchable, reviewable, and reusable without uploading private logs.
+AI Coding 的关键产出经常不只存在于最终 commit 里，也分散在 Claude Code / Codex 的本地 session trace 里。Prompt 里会包含任务背景、执行边界、调试路径、失败尝试、约束变化和最终决策。
 
-This project is useful for prompt reuse, workflow review, failure analysis, and building a personal data layer around AI-assisted development. This public repository contains only fictional sample data.
+Agent Trace Reporter 把这些本地 trace 转换成按周、项目和设备聚合的 Markdown 报告，让 AI Coding 过程更容易搜索、复盘和复用，同时不上传任何本地日志。
 
-## What It Does
+这个项目适合用来做 prompt 复用、workflow review、failure analysis，以及围绕 AI-assisted development 建立个人数据层。公开仓库只包含虚构 sample data。
 
-- Parses Claude Code JSONL logs.
-- Parses Codex JSONL logs.
-- Filters system messages and keeps real user requests.
-- Groups messages by ISO week, project, and device.
-- Infers project names from `cwd`.
-- Generates Markdown weekly reports.
-- Outputs project statistics and frequent keywords.
+## 它能做什么
 
-## Quick Start
+- 解析 Claude Code JSONL logs。
+- 解析 Codex JSONL logs。
+- 过滤系统消息，只保留真实用户请求。
+- 按 ISO week、project、device 聚合。
+- 根据 `cwd` 推断项目名。
+- 生成 Markdown 周报。
+- 输出项目统计和高频关键词。
 
-This repository does not contain any real session logs. The commands below read only the fictional data under `samples/`.
+## 快速开始
+
+本仓库不包含任何真实 session log。下面的命令只读取 `samples/` 里的虚构数据。
 
 ```bash
 python claude_weekly_summary.py --device sample --input-dir samples/claude-code --output-dir sample-reports --week 2026-W15
 python codex_weekly_summary.py --device sample --input-dir samples/codex --output-dir sample-reports --week 2026-W15
 ```
 
-Run tests:
+运行测试：
 
 ```bash
 python -m unittest discover -s tests
@@ -40,25 +42,25 @@ python -m unittest discover -s tests
 - [Claude Code sample report](sample-reports/2026-W15/cc-sample.md)
 - [Codex sample report](sample-reports/2026-W15/cd-sample.md)
 
-## What This Demonstrates
+## 这个项目展示什么
 
-This repository demonstrates:
+这个仓库用于展示：
 
-- Local review tooling for AI coding workflows.
-- Agent trace parsing and structuring.
-- Data preparation for failure analysis.
-- Local data processing boundaries.
-- Developer-tool design tradeoffs and privacy boundaries.
+- AI Coding workflow 的本地复盘能力。
+- Agent trace 解析和结构化能力。
+- failure analysis 的数据准备思路。
+- local data processing 的工程边界。
+- 面向开发者工具的设计取舍和隐私边界。
 
-## Privacy Boundary
+## 隐私边界
 
-- **Local-first**: the tool processes local files only.
-- **No upload**: it does not upload session logs.
-- **No real logs in public repo**: this public repository does not include real Claude Code or Codex session records.
-- **Sample data only**: `samples/` and `sample-reports/` contain only fictional content.
-- **Disposable generated reports**: the default output directory, `reports/`, is ignored by `.gitignore` and can be deleted at any time.
+- **Local-first**：工具只处理本地文件。
+- **No upload**：不会上传 session log。
+- **No real logs in public repo**：公开仓库不包含真实 Claude Code / Codex 会话记录。
+- **Sample data only**：`samples/` 和 `sample-reports/` 只包含虚构内容。
+- **Disposable generated reports**：默认输出目录 `reports/` 被 `.gitignore` 忽略，用户可以随时删除。
 
-See [docs/privacy-boundary.md](docs/privacy-boundary.md) for more detail.
+更多说明见 [docs/privacy-boundary.md](docs/privacy-boundary.md)。
 
 ## CLI Usage
 
@@ -76,14 +78,14 @@ python codex_weekly_summary.py --device sample --input-dir samples/codex --outpu
 python codex_weekly_summary.py --device sample --input-dir samples/codex --output-dir sample-reports --all
 ```
 
-Arguments:
+参数：
 
-- `--input-dir`: JSONL input directory. The demo uses `samples/`.
-- `--output-dir`: Markdown output directory. Defaults to `reports/`.
-- `--device`: device label. Allowed values are `sample`, `air`, and `pro`.
-- `--week`: ISO week, such as `2026-W15`.
-- `--all`: generates reports for every week found in the input data.
+- `--input-dir`：JSONL 输入目录，demo 使用 `samples/`。
+- `--output-dir`：Markdown 输出目录，默认 `reports/`。
+- `--device`：设备标签，允许 `sample`、`air`、`pro`。
+- `--week`：指定 ISO week，例如 `2026-W15`。
+- `--all`：生成输入数据里的所有周。
 
-## License
+## 授权
 
 MIT License. See [LICENSE](LICENSE).
